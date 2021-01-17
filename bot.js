@@ -99,7 +99,7 @@ client.elevation = message => {
     let permlvl = 0;
     if (message.member.hasPermission("BAN_MEMBERS")) permlvl = 2;
     if (message.member.hasPermission("ADMINISTRATOR")) permlvl = 3;
-    if (message.author.id === ayarlar.sahip) permlvl = 4;
+    if (message.author.id === Settings.BotSettings.Owner) permlvl = 4;
     return permlvl;
 };
 
@@ -135,7 +135,7 @@ client.on("guildMemberAdd", async (member) => {
     
     client.on("guildMemberAdd", member => {  
       const kanal = member.guild.channels.cache.find(r => r.id === Settings.Welcome.WelcomeChat);
-      const register = `<@&REGISTERER ROL ID>`
+      const register = `<@&800413911933255684>`
       let los = client.users.cache.get(member.id);
       require("moment-duration-format");
         const kurulus = new Date().getTime() - los.createdAt.getTime();  
@@ -166,7 +166,7 @@ client.on("guildMemberAdd", async (member) => {
       const kuruluss = new Date().getTime() - los.createdAt.getTime();  
       const gecen = moment.duration(kuruluss).format(`YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`) 
   const embed = new Discord.MessageEmbed()
-  .setTitle(`ᛉ Menthe #TAGLIALIM`)
+  .setTitle(`Sunucumuza Hoşgeldin`)
   .setThumbnail(member.user.avatarURL({dynamic: true}))
   .setDescription(`**<a:morkitap:764161510855409683> Menthe'ye Hoşgeldin <@${los.id}> !\n\n<a:yildiz:764161513405284383> Seninle beraber sunucumuz `  + üyesayısı +  ` kişiye ulaştı.\n\n<a:kelebek:764161534439456768> ` + kontrol + `\n\n<a:mor_gul:764501623749738506> Hesabın \``+ gecen +`\` Önce Oluşturulmuş.\n\n<a:dikkat:764161510787907635> <@&764158087854424134> Rolündeki yetkililer seninle ilgilenecektir.\n\n<a:alev:764161510503088128> Kaydını tamamlamak için herhangi bir \`Confirmation\` odalarından birine girmen yeterlidir.\n\n<a:duyuru:764161510292586546> Tagımızı alarak \`ᛉ\` ailemizin bir parçası olabilirsin.**`)
   .setColor("RANDOM")
