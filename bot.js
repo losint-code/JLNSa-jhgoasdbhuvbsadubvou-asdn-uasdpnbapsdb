@@ -135,7 +135,7 @@ client.on("guildMemberAdd", async (member) => {
     
     client.on("guildMemberAdd", member => {  
       const kanal = member.guild.channels.cache.find(r => r.id === Settings.Welcome.WelcomeChat);
-      const register = `<@&REGISTERER ROL ID>`
+      const register = `<@&${Settings.Roles.Registerer}>`
       let los = client.users.cache.get(member.id);
       require("moment-duration-format");
         const kurulus = new Date().getTime() - los.createdAt.getTime();  
