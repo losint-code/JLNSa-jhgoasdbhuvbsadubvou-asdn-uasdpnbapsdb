@@ -168,7 +168,7 @@ client.on("guildMemberAdd", async (member) => {
   const embed = new Discord.MessageEmbed()
   .setTitle(`Sunucumuza Hoşgeldin`)
   .setThumbnail(member.user.avatarURL({dynamic: true}))
-  .setDescription(`**${Other.EmojiGeneral.Emoji1} Menthe'ye Hoşgeldin <@${los.id}> !\n\n${Other.EmojiGeneral.Emoji2} Seninle beraber sunucumuz `  + üyesayısı +  ` kişiye ulaştı.\n\n${Other.EmojiGeneral.Emoji3} ` + kontrol + `\n\n${Other.EmojiGeneral.Emoji4} Hesabın \``+ gecen +`\` Önce Oluşturulmuş.\n\n${Other.EmojiGeneral.Emoji5} <@&764158087854424134> Rolündeki yetkililer seninle ilgilenecektir.\n\n${Other.EmojiGeneral.Emoji6} Kaydını tamamlamak için herhangi bir \`Confirmation\` odalarından birine girmen yeterlidir.\n\n${Other.EmojiGeneral.Emoji7} Tagımızı alarak \`${Settings.ServerSettings.Tag}\` ailemizin bir parçası olabilirsin.**`)
+  .setDescription(`**${Other.EmojiGeneral.Emoji1} • Menthe'ye Hoşgeldin <@${los.id}> !\n\n${Other.EmojiGeneral.Emoji2} • Seninle beraber sunucumuz `  + üyesayısı +  ` kişiye ulaştı.\n\n${Other.EmojiGeneral.Emoji3} • ` + kontrol + `\n\n${Other.EmojiGeneral.Emoji4} • Hesabın \``+ gecen +`\` Önce Oluşturulmuş.\n\n${Other.EmojiGeneral.Emoji5} • <@&764158087854424134> Rolündeki yetkililer seninle ilgilenecektir.\n\n${Other.EmojiGeneral.Emoji6} • Kaydını tamamlamak için herhangi bir \`Confirmation\` odalarından birine girmen yeterlidir.\n\n${Other.EmojiGeneral.Emoji7} • Tagımızı alarak \`${Settings.ServerSettings.Tag}\` ailemizin bir parçası olabilirsin.**`)
   .setColor("RANDOM")
   kanal.send(register)
   kanal.send(embed)
