@@ -160,15 +160,15 @@ client.on("guildMemberAdd", async (member) => {
           }
     
       var kontrol;
-    if (kurulus < 1296000000) kontrol = `Hesap Durumu Maalesef Güvenilir Değil ${Other.EmojiGeneral.Tik}`
-    if (kurulus > 1296000000) kontrol = `Hesap Durumu Güvenilir Gözüküyor ${Other.EmojiGeneral.Çarpı}`
+    if (kurulus < 1296000000) kontrol = `Hesap Durumu Maalesef Güvenilir Değil ${Other.EmojiGeneral.Çarpı}`
+    if (kurulus > 1296000000) kontrol = `Hesap Durumu Güvenilir Gözüküyor ${Other.EmojiGeneral.Tik}`
       moment.locale("tr");
       const kuruluss = new Date().getTime() - los.createdAt.getTime();  
       const gecen = moment.duration(kuruluss).format(`YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`) 
   const embed = new Discord.MessageEmbed()
   .setTitle(`Sunucumuza Hoşgeldin ${member.user.username}`)
   .setThumbnail(member.user.avatarURL({dynamic: true}))
-  .setDescription(`**${Other.EmojiGeneral.Emoji1} • ${Settings.ServerSettings.ServerName}'ye Hoşgeldin <@${los.id}> !\n\n${Other.EmojiGeneral.Emoji2} • Seninle beraber sunucumuz `  + üyesayısı +  ` kişiye ulaştı.\n\n${Other.EmojiGeneral.Emoji3} • ` + kontrol + `\n\n${Other.EmojiGeneral.Emoji4} • Hesabın \``+ gecen +`\` Önce Oluşturulmuş.\n\n${Other.EmojiGeneral.Emoji5} • <@&764158087854424134> Rolündeki yetkililer seninle ilgilenecektir.\n\n${Other.EmojiGeneral.Emoji6} • Kaydını tamamlamak için herhangi bir \`Confirmation\` odalarından birine girmen yeterlidir.\n\n${Other.EmojiGeneral.Emoji7} • Tagımızı alarak \`${Settings.ServerSettings.Tag}\` ailemizin bir parçası olabilirsin.**`)
+  .setDescription(`**${Other.EmojiGeneral.Emoji1} • ${Settings.ServerSettings.ServerName}'ye Hoşgeldin <@${los.id}> !\n\n${Other.EmojiGeneral.Emoji2} • Seninle beraber sunucumuz `  + üyesayısı +  ` kişiye ulaştı.\n\n${Other.EmojiGeneral.Emoji3} • ` + kontrol + `\n\n${Other.EmojiGeneral.Emoji4} • Hesabın \``+ gecen +`\` Önce Oluşturulmuş.\n\n${Other.EmojiGeneral.Emoji5} • <@&${Settings.Roles.Registerer}> Rolündeki yetkililer seninle ilgilenecektir.\n\n${Other.EmojiGeneral.Emoji6} • Kaydını tamamlamak için herhangi bir \`Confirmation\` odalarından birine girmen yeterlidir.\n\n${Other.EmojiGeneral.Emoji7} • Tagımızı alarak \`${Settings.ServerSettings.Tag}\` ailemizin bir parçası olabilirsin.**`)
   .setColor("RANDOM")
   kanal.send(register)
   kanal.send(embed)
